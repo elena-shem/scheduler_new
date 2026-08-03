@@ -7,8 +7,8 @@ class Create_examperiods
 	public function up()
 	{
 		\DBUtil::create_table('examperiods', array(
-			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
-			'season' => array('constraint' => '"Xeimerinh","Earinh","Septemprh"', 'type' => 'enum'),
+			'id' => array('type' => 'INTEGER PRIMARY KEY AUTOINCREMENT'),
+			'season' => array('constraint' => 32, 'type' => 'varchar'),
 			'academic_year' => array('constraint' => 32, 'type' => 'varchar'),
 			'start' => array('type' => 'date'),
 			'end' => array('type' => 'date'),
@@ -17,7 +17,7 @@ class Create_examperiods
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
-		), array('id'));
+		), array());
 	}
 
 	public function down()

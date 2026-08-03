@@ -7,7 +7,7 @@ class Create_assignments_preferences
 	public function up()
 	{
 		\DBUtil::create_table('assignments_preferences', array(
-			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
+			'id' => array('type' => 'INTEGER PRIMARY KEY AUTOINCREMENT'),
 			'examperiod_id' => array('constraint' => 11, 'type' => 'int'),
 			'doctoral_id' => array('constraint' => 11, 'type' => 'int'),
 			'hours_remaining_tmp' => array('constraint' => 11, 'type' => 'int'),
@@ -18,7 +18,7 @@ class Create_assignments_preferences
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
-		), array('id'));
+		), array());
 	}
 
 	public function down()

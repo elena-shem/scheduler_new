@@ -7,13 +7,13 @@ class Create_doctoralsupervisors
 	public function up()
 	{
 		\DBUtil::create_table('doctoralsupervisors', array(
-			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
+			'id' => array('type' => 'INTEGER PRIMARY KEY AUTOINCREMENT'),
 			'doctoral_id' => array('constraint' => 11, 'type' => 'int'),
 			'professor_id' => array('constraint' => 11, 'type' => 'int'),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
-		), array('id'));
+		), array());
 	}
 
 	public function down()

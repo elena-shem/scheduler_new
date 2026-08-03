@@ -6,7 +6,7 @@ class Rename_table_welcomes_to_welcomeposts
 {
 	public function up()
 	{
-		\DBUtil::rename_table('welcomes', 'welcomeposts');
+		\DB::query('ALTER TABLE welcomes RENAME TO welcomeposts;')->execute();
 	}
 
 	public function down()
